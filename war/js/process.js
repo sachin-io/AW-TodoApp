@@ -1,5 +1,3 @@
-var app = window.AAFClient.init();
-
 /**
  * App Initialization 
  * 1. Iframe app would trigger handshake request to parent. 
@@ -57,8 +55,7 @@ var app = window.AAFClient.init();
  */
  
  var TodoApp = (function(todo){
-	 var _app = _context = _appUser = {};
-	 
+	 var _app = _context = _appUser = {},
 	 todo.push = function(type,obj){
 		 $.extend(obj,{'id':_context.id});
 		 _app.postMessage(type,obj);
